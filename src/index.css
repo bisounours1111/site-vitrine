@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap");
+
+:root {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: #fff0f5;
+}
+
+/* Ajout d'éléments décoratifs fleuris */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50 0C22.4 0 0 22.4 0 50s22.4 50 50 50 50-22.4 50-50S77.6 0 50 0zm0 10c22.1 0 40 17.9 40 40s-17.9 40-40 40S10 72.1 10 50 27.9 10 50 10z' fill='%23FFB6C1' fill-opacity='0.1'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Styles pour les boutons */
+button {
+  font-family: "Playfair Display", serif;
+}
+
+/* Styles pour les titres */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Playfair Display", serif;
+  color: #c71585;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* Styles pour les liens */
+a {
+  color: #ff69b4;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-weight: 500;
+}
+
+a:hover {
+  color: #c71585;
+}
+
+/* Styles pour les cartes */
+.MuiCard-root {
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(255, 105, 180, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.MuiCard-root:hover {
+  transform: translateY(-5px);
+}
+
+/* Styles pour les formulaires */
+.MuiTextField-root {
+  margin-bottom: 1rem;
+}
+
+.MuiInputLabel-root {
+  color: #ff69b4;
+}
+
+.MuiOutlinedInput-root {
+  border-radius: 25px;
+}
+
+.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: #ff69b4;
+}
+
+/* Styles pour les boutons */
+.MuiButton-root {
+  border-radius: 25px;
+  text-transform: none;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  padding: 8px 24px;
+  letter-spacing: 0.3px;
+}
+
+.MuiButton-contained {
+  background-color: #ff69b4;
+}
+
+.MuiButton-contained:hover {
+  background-color: #c71585;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+/* Styles pour le mode sombre */
+[data-theme="dark"] {
+  background-color: #1a1a2e;
+}
+
+[data-theme="dark"] body::before {
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50 0C22.4 0 0 22.4 0 50s22.4 50 50 50 50-22.4 50-50S77.6 0 50 0zm0 10c22.1 0 40 17.9 40 40s-17.9 40-40 40S10 72.1 10 50 27.9 10 50 10z' fill='%23B366FF' fill-opacity='0.1'/%3E%3C/svg%3E");
+}
+
+[data-theme="dark"] .MuiCard-root {
+  box-shadow: 0 4px 8px rgba(179, 102, 255, 0.2);
+}
+
+[data-theme="dark"] .MuiButton-contained {
+  background-color: #b366ff;
+}
+
+[data-theme="dark"] .MuiButton-contained:hover {
+  background-color: #9933ff;
+}
+
+[data-theme="dark"] .MuiInputLabel-root {
+  color: #e6b3ff;
+}
+
+[data-theme="dark"]
+  .MuiOutlinedInput-root.Mui-focused
+  .MuiOutlinedInput-notchedOutline {
+  border-color: #e6b3ff;
+}
