@@ -37,7 +37,7 @@ function App() {
           }}
         >
           <Navbar onThemeToggle={toggleTheme} isDarkMode={isDarkMode} />
-          <Box sx={{ flexGrow: 1 }}>
+          <Box sx={{ flexGrow: 1, pt: "64px" }}>
             <Routes>
               <Route path="/" element={<Home />} />
               <Route

@@ -14,6 +14,11 @@ import Brightness7Icon from "@mui/icons-material/Brightness7";
 const StyledAppBar = styled(AppBar)(({ theme }) => ({
   backgroundColor: theme.palette.background.paper,
   boxShadow: "0 2px 4px rgba(0,0,0,0.1)",
+  position: "fixed",
+  top: 0,
+  left: 0,
+  right: 0,
+  zIndex: 1000,
 }));
 
 const StyledLink = styled(Link)(({ theme }) => ({
@@ -52,7 +57,7 @@ const ThemeToggleButton = styled(IconButton)(({ theme }) => ({
 
 const Navbar = ({ onThemeToggle, isDarkMode }) => {
   return (
-    <StyledAppBar position="static">
+    <StyledAppBar>
       <Toolbar>
         <Logo
           variant="h6"
